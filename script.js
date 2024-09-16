@@ -159,6 +159,114 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+///////////JAVASCRIPT FOR TESTIMOONIAL
+
+const testimonials = [
+  { name: "Lateefat & Abdullahi", content: "What I admire about you is your personality, your understanding. You were all calm all through the planning process. You made sure everything was well connected despite that I was multi-tasking. Glam1907 is actually the best.I also commend your team", image: "/image/16.jpg" },
+  { name: "Lola & Segun", content: "Thank you very much for standing by me through it, all for your commitment, the love I got from you was overwhelming and for giving me a beautiful ceremony, it was perfect and your coordinators were superb. The top-notch professionalism, you're the best of the best.", image: "/image/14.jpg" },
+  { name: "Mrs Adefeiyisan", content: "Many thanks for your services. We really appreciate you and your team's effort in ensuring that the event was a success, all the time working closely with us and family to achieve this. I did not regret working with you and I will do that over and over again.", image: "/image/10.jpg" },
+  { name: "Temi & Lanre", content: "I wanted to take a moment to express my deepest gratitude for the exceptional work you put into planning our wedding. Your dedication and tireless efforts over the course of eight months truly paid off. Your team are superb, wonderful and well-co-ordinated. Thanks.", image: "/image/15.jpg" },
+  { name: "Sltillinfinity", content: "Words can't express how much I appreciate you and your work. There were bumps along the way, indecision and others but you and your team finished work. I must say, it was too good. You're everywhere making sure that things work perfectly. Thank you very much", image: "/image/11.jpg" },
+  // { name: "Sarah Wilson", content: "Innovative and user-friendly. A game-changer in the industry.", image: "/api/placeholder/80/80" },
+];
+
+let currentIndex = 0;
+const testimonialSlider = document.querySelector('.testimonial-slider');
+const contentElement = document.querySelector('.content');
+const nameElement = document.querySelector('.name');
+const imageElement = document.querySelector('.testimonial-image');
+let intervalId;
+
+function updateTestimonial() {
+  const testimonial = testimonials[currentIndex];
+  contentElement.textContent = testimonial.content;
+  nameElement.textContent = testimonial.name;
+  imageElement.src = testimonial.image;
+  imageElement.alt = testimonial.name;
+}
+
+function nextTestimonial() {
+  testimonialSlider.style.transform = 'translateX(-100%)';
+  setTimeout(() => {
+      currentIndex = (currentIndex + 1) % testimonials.length;
+      updateTestimonial();
+      testimonialSlider.style.transition = 'none';
+      testimonialSlider.style.transform = 'translateX(100%)';
+      setTimeout(() => {
+          testimonialSlider.style.transition = 'transform 0.5s ease';
+          testimonialSlider.style.transform = 'translateX(0)';
+      }, 50);
+  }, 500);
+}
+
+function startInterval() {
+  intervalId = setInterval(nextTestimonial, 6000);
+}
+
+function stopInterval() {
+  clearInterval(intervalId);
+}
+
+testimonialSlider.addEventListener('mouseenter', stopInterval);
+testimonialSlider.addEventListener('mouseleave', startInterval);
+
+// Touch swipe functionality
+let touchStartX = 0;
+let touchEndX = 0;
+
+document.addEventListener('touchstart', e => {
+  touchStartX = e.changedTouches[0].screenX;
+  stopInterval();
+});
+
+document.addEventListener('touchend', e => {
+  touchEndX = e.changedTouches[0].screenX;
+  handleSwipe();
+  startInterval();
+});
+
+function handleSwipe() {
+  if (touchStartX - touchEndX > 50) {
+      nextTestimonial();
+  }
+}
+
+// Initialize
+updateTestimonial();
+startInterval();
+
+
+
+
+//////SCRIPT FOR SUBSCRIBE 
+
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbw_uB_NnUmE6kgDvNXZGwnfliw6MRoCQoecVupgkHUr0LlUB4_P2hCAlvl9FjrqTP_7/exec'
+const form = document.forms['submit-to-google-sheet']
+const msg = document.getElementById("msg")
+const dotLoading = document.getElementById("dot-loading")
+const subscribeButton = document.getElementById("subscribe-button")
+
+form.addEventListener('submit', e => {
+    e.preventDefault()
+    dotLoading.style.display = 'inline-block'
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            dotLoading.style.display = 'none'
+            msg.innerHTML = "Thank You For Subscribing!"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => {
+            dotLoading.style.display = 'none'
+            console.error('Error!', error.message)
+        })
+})
+
+
+
 
 
 
