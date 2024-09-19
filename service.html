@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glam1907| About</title>
+    <title>Glam1907| Service</title>
     <meta name="description" content="BEST EVENT COMPANY">
 
 
@@ -108,7 +108,7 @@
 
 
         #hero {
-        background-image: url(image/20.jpg);
+        background-image: url(image/29.jpg);
         width: 100%;
         background-size: cover;
         background-repeat: no-repeat;
@@ -152,7 +152,7 @@
         letter-spacing: 0.5em;
         font-family: var(--font-2);
         font-weight: 400;
-        color: var(--white-color);
+        color: var(--dark-main-color);
         margin-bottom: 20px;
         }
 
@@ -163,7 +163,7 @@
         }
 
         .wec1 p {
-            color: var(--white-color);
+            color: var(--dark-main-color);
         }
 
         #wec {
@@ -172,16 +172,16 @@
         justify-content: center;
         text-align: center;
         overflow: hidden;
-        background-color: var(--red-color);
+        /* background-color: var(--yellow); */
         }
 
         .wec1 h2 span {
         font-family: custom, cursive;
-        color: var(--yellow);
+        color: var(--red-color);
         }
 
         .wec1 h2 {
-            color: var(--white-color);
+            color: var(--dark-main-color);
         }
         .wec0 {
         display: flex;
@@ -211,8 +211,107 @@
             /* align-items: center; */
             text-align: center;
             overflow: hidden;
-            margin-bottom: 50px;
+            margin-bottom: 80px;
             }
+
+
+            .qui1 {
+            background-color: var(--white-color);
+            width: 100%;
+            position: relative;
+            text-align: left;
+            padding-top: 20px;
+            margin-top: 10px;
+            height: auto;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+
+            .father-category {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            position: relative;
+            /* left: 40px; */
+        }
+        .category-section {
+            position: relative;
+            width: 100%;
+            height: 350px;
+            margin-bottom: 0px;
+            margin-top: 70px;
+            overflow: hidden;
+            background-color: black;
+        }
+        .image-container2 {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            opacity: 0.4;
+        }
+        .image-container2 img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease-in-out;
+        }
+        .image-container2 .image2 {
+            opacity: 0;
+            position: absolute;
+            transform: scale(1.2);
+        }
+        .category-section:hover .image2 {
+            opacity: 1;
+        
+            transform: scale(1);
+        }
+        .category-section:hover .image1 {
+            opacity: 0;
+            transform: scale(1.2);
+        }
+
+        .category-section h2 {
+            position: absolute;
+            top: 20%;
+            left: 5%;
+            /* transform: translate(-50%, -50%); */
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+            font-size: 24px;
+            /* z-index: 1; */
+            pointer-events: none;
+            font-weight: 500;
+        }
+
+
+        .category-section h2 span {
+            font-family: custom, cursive;
+        }
+
+        .category-section button {
+            /* margin-top: 10px; */
+            padding: 10px 30px;
+            font-size: 16px;
+            left: 20px;
+            cursor: pointer;
+            border: 2px solid var(--purplecolor);
+            background: none;
+            color: var(--white-color);
+            transition: background-color 0.3s ease;
+            position: absolute;
+            top: 70%;
+            border-left: none;
+            border-right: none;
+        }
+        
+        .category-section button:hover {
+            background-color: var(--purplecolor);
+        }
+
 
 
             /*---------FOUNDER---------*/
@@ -327,6 +426,40 @@
             color: var(--dark-main-color);
         }
 
+        /* Badge container */
+        .badge-container {
+            position: relative;
+            display: flex;
+            justify-content: left;
+            align-items: left;
+        }
+
+        /* Badge icon styling */
+        .badge-icon {
+            font-size: 20px;
+            color: red;
+            background-color: #ffdddd; /* Whitish-red background */
+            border-radius: 50%;
+            padding: 15px;
+            /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+            animation: pulse 1.5s infinite;
+        }
+
+        /* Bounce animation */
+        @keyframes pulse {
+        0% {
+            transform: scale(1);
+            opacity: 1;
+        }
+        50% {
+            transform: scale(1.1);
+            opacity: 0.8;
+        }
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
 
 
 /*-----------MEDIA QUERY---------*/
@@ -360,6 +493,44 @@
 
             .wec1 {
             margin-top: 70px;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+
+        /*------------WHAT GLAM DO-----------*/
+
+
+        .pro1 {
+        padding-left: 50px;
+        }
+
+        .pro1 h1 {
+            font-size: 2.5em;
+            padding-right: 50%;
+        }
+
+        .father-category {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            width: 100%;
+        }
+        .category-section {
+            width: 320px;
+        }
+
+        .image-container2 img {
+            width: 100%;
+        }
+
+        .qui1 {
+            background-color: var(--white-color);
+            width: 100%;
+            position: relative;
+            text-align: left;
+            padding-top: 20px;
+            margin-top: 10px;
+            height: auto;
             padding-left: 50px;
             padding-right: 50px;
         }
@@ -429,7 +600,7 @@
 
 
         #hero {
-        background-image: url(image/20.jpg);
+        background-image: url(image/29.jpg);
         width: 100%;
         background-size: cover;
         background-repeat: no-repeat;
@@ -490,6 +661,45 @@
             }
 
 
+            /*-------------------WHAT GLAM DO-------------------*/
+
+
+            .pro1 {
+                padding-left: 70px;
+            }
+
+            .pro1 h1 {
+                font-size: 2.5em;
+                padding-right: 50%;
+            }
+
+            .father-category {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 35px;
+                width: 100%;
+            }
+            .category-section {
+                width: 350px;
+            }
+
+            .image-container2 img {
+                width: 100%;
+            }
+
+            .qui1 {
+            background-color: var(--white-color);
+            width: 100%;
+            position: relative;
+            text-align: left;
+            padding-top: 20px;
+            margin-top: 10px;
+            height: auto;
+            padding-left: 90px;
+            padding-right: 90px;
+        }
+
+
 
             /*------------founder--------*/
 
@@ -537,6 +747,7 @@
         .blp {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
         }
 
         .blp1 h3 {
@@ -668,8 +879,8 @@
    <section id="hero">
 
     <div class="hero1">
-        <h2>About Us</h2>
-        <p>Here is where to read more about Glam1907 Events</p>
+        <h2>Services</h2>
+        <p></p>
     </div>
 
 
@@ -684,15 +895,15 @@
 
         <div class="wec0">
             <div class="wec1">
-                <h6>WHO WE ARE</h6>
-                <h2 data-aos="fade-up">Designing <span>Celebrations</span> As Unique As You.</h2>
-                <p data-aos="fade-up" data-aos-delay="200">At Glam1907 Events, we’re an event planning company based in Lagos, Nigeria, dedicated to creating personalized, seamless experiences for a variety of clients. We specialize in event design, planning, and management, bringing your vision to life in a way that reflects your unique style.
+                <h6>WHAT WE DO</h6>
+                <h2 data-aos="fade-up">Turning Life's Importance Events Into Timeless <span>Memories</span></h2>
+                <p data-aos="fade-up" data-aos-delay="200">Every special occasion deserves to be more than just an event—it should be a memory that lingers in the hearts of all who attend. We take pride in turning life's most important moments into timeless experiences. From the smallest details to the grandest gestures, we ensure every aspect of your event reflects your vision and personality.
 
-                    <br><br>With a network of top-tier vendors and a team committed to excellence, we ensure every detail is covered to provide exceptional quality and comfort. Our focus is on delivering unmatched customer service while crafting events that truly stand out.</p>
+                    <br><br>Our dedicated team works closely with you to create an atmosphere that captures the essence of your celebration, whether it’s an intimate gathering or a large-scale affair. With a keen eye for detail and a passion for excellence, we craft moments that you and your guests will cherish for a lifetime. Let us transform your event into a lasting memory.</p>
             </div>
 
             <div class="wec-image">
-                <img src="image/21.jpg" alt="image" data-aos="fade-up" data-aos-delay="300">
+                <img src="image/22.jpg" alt="image" data-aos="fade-up" data-aos-delay="300">
             </div>
         </div>
    </section>
@@ -702,37 +913,61 @@
 
    <section id="qui">
     <div class="qui1">
+
         <div class="qui2">
 
             <h3>WHAT GLAM1907 DO</h3>
             <div class="line"></div>
 
         </div>
-        <div class="qui3">
-            <div class="qui4" data-aos="fade-right">
 
-                <h2>Wedding Coordination</h2>
-                <p>Our wedding coordination service ensures every moment flows seamlessly, from the ceremony to the reception. We’ll take care of timelines, vendor management, and last-minute details, giving you peace of mind to enjoy your wedding. Trust us to bring your vision to life, so all you need to do is celebrate love.</p>
-                <div class="but"><a href="book.html"><span>Book Now</span></a><i class="ti-arrow-right"></i></div>
+        <div class="father-category">
+
+            <div class="category-section">
+              
+              <div class="image-container2">
+                  <img src="image/01.jpg" alt="wedding Image 1" class="image image1">
+                  <img src="image/03.jpg" alt="wedding Image 2" class="image image2">
+              </div>
+              <h2>Wedding <span>Planning</span></h2>
+              <a href="book.html"><button>Get A Quote</button></a>
+              </div>
+  
+  
+  
+            <div class="category-section">
+              
+            <div class="image-container2">
+                <img src="image/27.jpg" alt="wedding Image 1" class="image image1">
+                <img src="image/28.jpg" alt="wedding Image 2" class="image image2">
+            </div>
+            <h2>Co-operate <span>Events</span></h2>
+            <a href="book.html"><button>Book Now</button></a>
+            </div>
+  
+  
+            <div class="category-section">
+              
+              <div class="image-container2">
+                  <img src="image/25.jpg" alt="wedding Image 1" class="image image1">
+                  <img src="image/26.jpg" alt="wedding Image 2" class="image image2">
+              </div>
+              <h2>Events Planning & <span>Consultancy</span></h2>
+              <a href="book.html"><button>Get A Quote</button></a>
+              </div>
+    
+    
             </div>
 
-            <div class="qui4b"data-aos="fade-up" data-aos-delay="200">
-
-                <h2>Co-operate Events</h2>
-                <p>Our corporate event planning service ensures your event is professional, organized, and impactful. From conferences to company retreats, we handle everything—venue selection, logistics, and vendor coordination—so you can focus on your business goals. Whether it’s a small meeting or a large-scale event, we deliver seamless execution with attention to detail, making your event a success</p>
-                <div class="butb"><a href="book.html"><span>Book Now</span></a><i class="ti-arrow-right"></i></div>
-            </div>
-
-
-            <div class="qui4c"data-aos="fade-left" data-aos-delay="300">
-
-                <h2>Events Consultancy</h2>
-                <p>Our event consultancy service provides expert guidance to bring your vision to life. We help you plan every detail, offering tailored solutions for budgeting, logistics, and vendor selection. Whether you're hosting a wedding, corporate event, or private gathering, we ensure your event is well-organized and memorable. Let us simplify the process, so you can focus on creating an unforgettable experience.</p>
-                <div class="butc"><a href="book.html"><span>Book Now</span></a><i class="ti-arrow-right"></i></div>
-            </div>
+  
+  
         </div>
     </div>
    </section>
+
+
+
+  
 
    
 
@@ -776,10 +1011,10 @@
 <section id="sce">
     <div class="sce0">
         <div class="sce1">
-            <h6>Our Distinct Advantage</h6>
+            <h6>WHY CHOOSE US</h6>
 
             <div class="bp">
-                <h1>The Roadmap.</h1>
+                <h1>Effortless and Remarkable Planning.</h1>
                 <div class="bp-line"></div>
             </div>
             
@@ -788,33 +1023,63 @@
         <div class="blp">
 
             <div class="blp1">
+
+                <div class="badge-container">
+                    <i class="ti-medall-alt badge-icon"></i>
+                </div>
+
                 <h3>Mastery</h3>
                 <p>Our services are delivered with skillful precision and a dedication to preserving the essence of your brand, ensuring unforgettable experiences.</p>
             </div>
 
             <div class="blp1">
+
+                <div class="badge-container">
+                    <i class="ti-medall-alt badge-icon"></i>
+                </div>
+
                 <h3>Creativity</h3>
                 <p>We constantly strive to go beyond established norms, offering services that embrace fresh ideas and challenge conventional practices, driven by a forward-thinking team.</p>
             </div>
 
             <div class="blp1">
+
+                <div class="badge-container">
+                    <i class="ti-medall-alt badge-icon"></i>
+                </div>
+
                 <h3>Dedication</h3>
                 <p>Our deep commitment fuels us to be a dependable partner, ensuring we consistently deliver remarkable outcomes that reflect our passion for excellence.</p>
             </div>
 
             <div class="blp1">
+
+                <div class="badge-container">
+                    <i class="ti-medall-alt badge-icon"></i>
+                </div>
+
                 <h3>Excellence</h3>
                 <p>We focus on delivering superior outcomes while nurturing long-lasting, positive relationships with all our stakeholders, ensuring mutual growth and success.</p>
             </div>
 
 
             <div class="blp1">
+
+                <div class="badge-container">
+                    <i class="ti-medall-alt badge-icon"></i>
+                </div>
+
                 <h3>Productivity</h3>
                 <p>With careful stewardship of our clients' resources, we aim to maximize impact and deliver measurable results that provide exceptional value for every investment.</p>
             </div>
 
 
             <div class="blp1">
+
+                <div class="badge-container">
+                    <i class="ti-medall-alt badge-icon"></i>
+                </div>
+
                 <h3>Accuracy</h3>
                 <p>Through a meticulous, step-by-step approach, we grasp the nuances of client needs and audience expectations, ensuring precise and effective brand representation.</p>
             </div>
