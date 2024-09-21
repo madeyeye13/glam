@@ -292,6 +292,29 @@
             font-weight: 500;
         }
 
+        #gal {
+            margin-bottom: 60px;
+        }
+
+
+
+        /*---------------------BOOK NOW---------------*/
+
+            #gst {
+            background-image: url(deym/28.jpg);
+            height: 40vh;
+            background-repeat: repeat;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            text-align: center;
+            gap: 20px;
+            background-blend-mode: overlay;
+            background-color: #160e0d8d;
+            }
+
 
 
        
@@ -417,6 +440,16 @@
         }
 
 
+        /*--------------------GALLERY--------------*/
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+
+
 
 
         }
@@ -483,94 +516,14 @@
 
 
 
-        /*-------------EXPLORE THE SITE--------*/
+        /*--------------------GALLERY--------------*/
 
-            #qui {
-            background-color: #e42826;
-            height: 600px;
-            display: flex;
-            justify-content: center;
-            /* align-items: center; */
-            text-align: center;
-            overflow: hidden;
-            margin-bottom: 50px;
-            }
-
-
-            /*-------------------WHAT GLAM DO-------------------*/
-
-
-            .pro1 {
-                padding-left: 70px;
-            }
-
-            .pro1 h1 {
-                font-size: 2.5em;
-                padding-right: 50%;
-            }
-
-            .father-category {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: 35px;
-                width: 100%;
-            }
-            .category-section {
-                width: 350px;
-            }
-
-            .image-container2 img {
-                width: 100%;
-            }
-
-            .qui1 {
-            background-color: var(--white-color);
-            width: 100%;
-            position: relative;
-            text-align: left;
-            padding-top: 20px;
-            margin-top: 10px;
-            height: auto;
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
             padding-left: 90px;
             padding-right: 90px;
         }
-
-
-
-            /*------------founder--------*/
-
-
-            .fou0 {
-            display: flex;
-            flex-direction: row;
-            padding-left: 0px;
-            padding-right: 0px;
-            gap: 90px;
-        }
-
-
-            .fou1 {
-               
-                text-align: left;
-                padding-right: 90px;
-                margin-top: 30px;
-                padding-left: 40px;
-                margin-bottom: 0px;
-                
-            }
-
-
-            .fou-image {
-                width: 200%;
-            
-            } 
-
-        .fou-image img {
-            width: 110%;
-            
-            
-        }
-
 
 
         /*--------------------ROADMAP------------*/
@@ -745,11 +698,13 @@
    <section id="gal">
 
         <div class="gallery">
+            
             <div class="gallery-item">
-                <a href="deym.html"><img src="image/07.jpg" alt="Image 1" class="gallery-image"></a>
-                <div class="overlay">
+
+                <img src="image/07.jpg" alt="Image 1" class="gallery-image"></a>
+                <a href="deym.html"><div class="overlay">
                     <p>Click To View</p>
-                </div>
+                </div></a>
 
                 <div class="ddetail">
 
@@ -798,8 +753,7 @@
             <!--============== THIRD========================-->
 
 
-             <!---------------------Second--------------------->
-
+             
 
              <div class="gallery-item">
                 <a href="sg.html"><img src="image/30.jpg" alt="Image 2" class="gallery-image"></a>
@@ -813,6 +767,95 @@
                     <div class="detail">
                         <h4>Sarah & Gbohunmi</h4>
                         <h5>#SgLoveaffair</h5>
+                    </div>
+    
+                    <div class="detail2">
+                        <h5>Type: Wedding</h5>
+                        <p>By Glam<span>1907</span></p>
+                    </div>
+    
+                </div>
+
+            </div>
+
+
+            <!--============== THIRD========================-->
+
+
+             
+
+            <div class="gallery-item">
+                <a href="sl.html"><img src="image/31.jpg" alt="Image 2" class="gallery-image"></a>
+                <div class="overlay">
+                    <p>Click To View</p>
+                </div>
+
+
+                <div class="ddetail">
+
+                    <div class="detail">
+                        <h4>Sharon & Ileri</h4>
+                        <h5>#Sltillinfinity23</h5>
+                    </div>
+    
+                    <div class="detail2">
+                        <h5>Type: Wedding</h5>
+                        <p>By Glam<span>1907</span></p>
+                    </div>
+    
+                </div>
+
+            </div>
+
+
+
+            <!--============== FIFTH========================-->
+
+
+             
+
+            <div class="gallery-item">
+                <a href="un.html"><img src="un/1.jpg" alt="Image 2" class="gallery-image"></a>
+                <div class="overlay">
+                    <p>Click To View</p>
+                </div>
+
+
+                <div class="ddetail">
+
+                    <div class="detail">
+                        <h4>Sharon & Ileri</h4>
+                        <h5>#Sltillinfinity23</h5>
+                    </div>
+    
+                    <div class="detail2">
+                        <h5>Type: Wedding</h5>
+                        <p>By Glam<span>1907</span></p>
+                    </div>
+    
+                </div>
+
+            </div>
+
+
+
+            <!--============== FIFTH========================-->
+
+
+             
+
+            <div class="gallery-item">
+                <a href="funion.html"><img src="funion/4.jpg" alt="Image 2" class="gallery-image"></a>
+                <div class="overlay">
+                    <p>Click To View</p>
+                </div>
+
+
+                <div class="ddetail">
+
+                    <div class="detail">
+                        <h4>Tolulope & Folarin</h4>
+                        <h5>#TheTFunion23</h5>
                     </div>
     
                     <div class="detail2">
