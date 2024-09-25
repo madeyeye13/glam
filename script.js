@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Hide loader after 2 seconds on initial page load
   setTimeout(function () {
       document.body.classList.add('loaded');
-  }, 2000);
+  }, 0);
 
   // Add a loading animation when navigating to other pages
   document.querySelectorAll('a').forEach(function (link) {
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
               // Delay navigation to simulate 2s loading
               setTimeout(function () {
                   window.location.href = url;
-              }, 2000);
+              }, 0);
           }
       });
   });
