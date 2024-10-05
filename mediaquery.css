@@ -315,6 +315,23 @@ header {
   }
 
 
+  /*---------------AS SEEN ON-------------*/
+
+  .infy4 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    align-content: center;
+    justify-items: center;
+    /* padding-left: 20px;
+    padding-right: 20px; */
+    
+  }
+
+
 
   /*-------------TESTIMONIAL---------*/
 
@@ -730,6 +747,25 @@ header {
         padding-left: 90px;
         padding-right: 90px;
       }
+
+
+
+
+      /*---------------AS SEEN ON-------------*/
+
+  .infy4 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    align-content: center;
+    justify-items: center;
+    /* padding-left: 20px;
+    padding-right: 20px; */
+    
+  }
 
 
 

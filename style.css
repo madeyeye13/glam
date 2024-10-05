@@ -800,6 +800,44 @@ p {
   border: none;
 }
 
+/*-------------------AS SEEN ON---------------*/
+
+
+#infy {
+  display: flex;
+  margin-top: 100px;
+  align-items: center;
+  align-content: center;
+  overflow: hidden;
+  justify-content: center;
+  text-align: center;
+}
+
+
+.infy4 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  align-content: center;
+  justify-items: center;
+  /* padding-left: 20px;
+  padding-right: 20px; */
+  
+}
+
+.infy3 h2 {
+  margin-bottom: 40px;
+}
+
+
+.infy4 img {
+  width: 120px;
+  height: auto;
+}
+
 /*--------------PORTFOLIO-----------*/
 
 /*------------- Portfolio Section -------------*/
